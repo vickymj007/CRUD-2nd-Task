@@ -1,38 +1,190 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Delicious+Handrawn&family=Poppins:wght@400;500;700;800&family=Quicksand:wght@400;500;600&family=Righteous&family=Sedgwick+Ave+Display&family=Ubuntu:wght@500;700&display=swap');
+*{
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  width: 100vw;
+  height: 100vh;
+  background: url(https://wallpaperaccess.com/full/3949079.png);
+  background-size: cover;
+  background-position: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap:20px;
+  padding: 15px 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, .2);
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+.navbar a.active{
+  background-color: #eb5e28;
+  color: #fff;
+}
+a{
+  transition: all .2s ease-in;
+}
+a:hover{
+  transform: scale(1.1);
+}
+.navbar > h2{
+  margin-right: auto;
+  color: #fff;
+}
+.navbar + h2{
+  margin: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.student-table{
+  /* max-width: 600px; */
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+table{
+  background-color: #0f4c5c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+tbody{
+  border-bottom: 2px solid #ff9f1c;
+}
+tbody tr:nth-child(even) {
+  background-color: #0b3c48;
+}
+td,th{
+  padding: 10px 20px;
+}
+td{
+  color: #fff;
+}
+thead{
+  background-color: #2ec4b6;
+}
+tbody button {
+  padding: 5px 15px;
+  border: none;
+  background-color: #ff9f1c;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: all .2s;
+}
+tbody button:hover{
+  background-color: #eb5e28;
+}
+.form-container{
+  background-color: #0f4c5c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding-top: 20px;
+}
+.form-container form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 50px 30px;
+  gap: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+input[type='text'], 
+input[type='number'], 
+input[type='email'], 
+input[type='password'] {
+  padding: 10px;
+  border: 2px solid #0f4c5c;
+  border-radius: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type='submit']{
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #2ec4b6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+input[type='submit']:hover{
+  background-color: #eb5e28;
+}
+.form-container h3 {
+  color: #fff;
+}
+.dashboard{
+  /* backdrop-filter: blur(5px); */
+  color: #fff;
+  margin: 20px 50px;
+  padding: 20px;
+}
+.form-container select{
+  padding: 10px;
+}
+.form-container label {
+  color: #fff;
+  text-align: left;
+}
+.student-login {
+  margin-top: 200px;
+}
+.student-login p {
+  color: #fff;
+}
+.student-dashboard {
+  margin-top: 30px;
+  color: #fff;
+}
+.student-dashboard strong{
+  font-size: 1.1rem;
+}
+.logout{
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ff9f1c;
+  outline: none;
+  border: none;
+  padding: 5px 20px;
+  transition: all .2s;
+  font-size: 1.04rem;
+}
+.logout:hover{
+  transform: scale(1.1);
+}
+.student-profile{
+  background-color: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 15px;
+  padding: 50px;
+}
+.student-profile p {
+  background-color: #0b3c48;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  text-align: left;
+  color: #fff;
+  border-radius: 10px;
+}
+.student-profile a{
+  background-color: #ff9f1c;
+  color: #000;
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+.student-profile h3{
+  margin-bottom: 15px;
+  color: #0b3c48;
 }
