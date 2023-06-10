@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch} from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { addTeacher } from '../Features/TeacherSlice'
+import { addTeacher } from '../../Features/TeacherSlice'
 import { nanoid } from '@reduxjs/toolkit'
 
 export const CreateTeachers = () => {

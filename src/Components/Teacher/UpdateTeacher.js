@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
-import { updateTeacher } from '../Features/TeacherSlice'
+import { updateTeacher } from '../../Features/TeacherSlice'
 
 export const UpdateTeacher = () => {
     const dispatch = useDispatch()

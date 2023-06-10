@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink, Outlet, useNavigate} from 'react-router-dom'
-import { login, logout } from '../Features/StudentLoginInfoSlice'
+import { login, logout } from '../../Features/StudentLoginInfoSlice'
 
 export const StudentLogin = () => {
   const studentLoginData = useSelector(state=>state.studentLoginData)
@@ -47,7 +47,7 @@ export const StudentLogin = () => {
         <button className='logout'onClick={handleLogout}>Logout</button>
       </nav>
       <div className='student-dashboard'>
-        <p>Welcome to the Student Page <strong>{userName}</strong></p>
+        <p>Welcome <strong>{studentLoginData.userName}</strong></p>
         <p>Use the Navigation Buttons to Navigate to Different pages</p>
       </div>
       <Outlet/>

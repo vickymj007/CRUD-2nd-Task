@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteStudent } from '../Features/StudentSlice'
 import { useNavigate } from 'react-router-dom'
+import { deleteStudent } from '../../Features/StudentSlice'
 
 export const ListStudents = () => {
   const studentData = useSelector(state => state.studentData)

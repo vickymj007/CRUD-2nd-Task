@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { updateStudentProfileData } from '../Features/StudentLoginInfoSlice'
+import { updateTeacherProfileData } from '../../Features/TeacherLoginInfoSlice'
 
-export const EditStudentProfile = () => {
-    const studentLoginData = useSelector(state=>state.studentLoginData)
+export const EditTeacherProfile = () => {
+    const teacherLoginData = useSelector(state=>state.teacherLoginData)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const [userName, setUserName] = useState(studentLoginData.userName)
-    const [email, setEmail] = useState(studentLoginData.email)
-    const [id, setId] = useState(studentLoginData.id)
+    const [userName, setUserName] = useState(teacherLoginData.userName)
+    const [email, setEmail] = useState(teacherLoginData.email)
+    const [id, setId] = useState(teacherLoginData.id)
 
     const handleSubmit= (e)=>{
         e.preventDefault()
-        const updatedStudentLoginData = {
+        const updatedTeacherLoginData = {
         userName,
         email,
         id,
-        password : studentLoginData.password
+        password : teacherLoginData.password
         } 
-        dispatch(updateStudentProfileData(updatedStudentLoginData))
-        navigate('/students/student-profile')
+        dispatch(updateTeacherProfileData(updatedTeacherLoginData))
+        navigate('/teachers/teacher-profile')
     }
 
 
